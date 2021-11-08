@@ -16,10 +16,16 @@
             <ul class = "navigation-list">
                 <li class = "nav-item"><a class = "link" href="index.html#anc1">about</a></li>
                 <li class = "nav-item"><a class = "link" href="index.html#anc2">beers</a></li>
-                <li class = "nav-item"><a class = "link header-logo" href="index.html"></a></li>
+                <li class="nav-item">
+                    <a class="header-logo" href="index.html"><img src="img/AG-whitesmoke.png" width="75" height="75"></a>
+                  </li>
                 <li class = "nav-item"><a class = "link" href="recipes.html">recipes</a></li>
                 <li class = "nav-item"><a class = "link" href="#anc3">contacts</a></li>
-                <li class = "nav-item-sign-in"><button type = "button" class = "button" title="Sign-in">⍈</button></li>
+                <li class = "nav-item-sign-in"><button type = "button" class = "button" title="Sign-in">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-user" viewBox="0 0 64 64">
+                        <path d="M35 39.84v-2.53c3.3-1.91 6-6.66 6-11.41 0-7.63 0-13.82-9-13.82s-9 6.19-9 13.82c0 4.75 2.7 9.51 6 11.41v2.53c-10.18.85-18 6-18 12.16h42c0-6.19-7.82-11.31-18-12.16z"></path>
+                    </svg>
+                </button></li>
             </ul>
         </nav>
     </header>
@@ -33,5 +39,40 @@
         <br><br>
         <a href="index.html"><img src="img/AGbrewery-medium.png">
     </footer>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+        $('a[href*=#]').bind("click", function(e) {
+            var anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $(anchor.attr('href')).offset().top
+                }, 700);
+            e.preventDefault();
+        });
+    </script>
+
+    <script type="text/javascript">
+        function up() {  
+            var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);  
+            if(top > 0) {  
+            window.scrollBy(0,((top+100)/-10));  
+            t = setTimeout('up()',20);  
+            } else clearTimeout(t);  
+            return false;  
+        } 
+    </script>
+
+    <script type="text/javascript">
+        (function($) {  
+            $(function() {  
+            
+            $('#up').click(function() {  
+                $('body,html').animate({scrollTop:0},500);  
+                return false;  
+            })  
+            
+            })  
+            })(jQuery) 
+    </script>
 
 </body>
