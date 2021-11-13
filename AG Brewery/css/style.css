@@ -146,7 +146,12 @@ strong{
 
 .nav-item:hover {
     background-color: #b2b2b2;
-    transition:0.3s;
+    transition:0.5s;
+}
+
+.nav-item:not(:hover) {
+    background-color: black;
+    transition:0.5s;
 }
 
 .nav-item:nth-child(1) {
@@ -187,23 +192,24 @@ strong{
     color: #b2b2b2;
 }
 
-.button {
+.sign-in-button {
     background: transparent;
     color:#f5f5f5;
     line-height: 53px;
     font-weight: bold;
+    padding-top: 15px;
     text-align: center;
     width: 80px;
     height: 73px;
     border:none;
 }
 
-.button:hover {
+.sign-in-button:hover {
     color:black;
     cursor: pointer;
 }
 
-.button:active {
+.sign-in-button:active {
     background-color: #f5f5f5;
 }
 
@@ -214,8 +220,15 @@ strong{
 
 .nav-item-sign-in:hover {
     background-color: #b2b2b2;
-    transition:0.3s;
+    transition:0.5s;
 }
+
+.nav-item-sign-in:not(:hover) {
+    background-color: black;
+    transition:0.5s;
+}
+
+
 
 .icon {
     display: inline-block;
@@ -291,10 +304,21 @@ strong{
 }
 
 .footer {
-    display:block;
+    display:flex;
+    flex-direction: row;
     align-items: center;
     padding: 36px 100px 36px 130px;
     background-color: black;
+}
+
+.footer--left-column {
+    align-self: flex-start;
+    float: left;
+}
+
+.footer--right-column {
+    align-self: flex-end;
+    float: right;
 }
 
 #back-top {
@@ -335,4 +359,77 @@ strong{
     color: black;
     text-align:center;
 
+}
+
+.search-box{
+    position:absolute;
+    top:190px;
+    left:50px;
+    transform:translate(0%,-100%);
+    background: black;
+    height: 40px;
+    border-radius:40px;
+    padding:10px;
+}
+
+.search-box:hover > .search-txt {
+    width: 160px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+    background: whitesmoke;
+
+}
+
+.search-btn {
+    color: #222222;
+    float:right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: whitesmoke;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.search-txt{
+    border:none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: whitesmoke;
+    font-size: 24px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.copyright {
+    color:whitesmoke;
+    position:relative;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    top:20px;
+    left: 30%;
+}
+
+.write-to-author {
+    color:whitesmoke;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.write-to-author:active {
+    color:whitesmoke;
+}
+
+.write-to-author:visited {
+    color: whitesmoke;
+    text-decoration: none;
 }
