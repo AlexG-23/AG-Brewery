@@ -105,7 +105,7 @@ strong{
     
     background-image: url(../img/main-background.jpeg);
     background-repeat: no-repeat;
-    min-height: 600px;
+    height: 600px;
     background-position: 50% bottom, 100% top;
     position: relative;
 }
